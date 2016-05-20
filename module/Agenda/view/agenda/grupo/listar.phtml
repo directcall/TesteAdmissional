@@ -8,6 +8,7 @@
             <th>ID</th>
             <th>Nome</th>
             <th>Descrição</th>
+            <th width="200px">Ações</th>
         </tr>
         </thead>
         <tbody>
@@ -16,6 +17,16 @@
                 <td><?php echo $grupo->id_grupo; ?></td>
                 <td><?php echo $grupo->nome; ?></td>
                 <td><?php echo $grupo->descricao; ?></td>
+                <td>
+                    <button class="btn btn-primary"
+                            onclick="window.location.href='/agenda/grupo/editar/<?php echo $grupo->id_grupo; ?>';">
+                        Editar
+                    </button>
+                    <button class="btn btn-danger"
+                            onclick="if(confirm('Deseja remover este grupo?')) { window.location.href='/agenda/grupo/remover/<?php echo $grupo->id_grupo; ?>'}">
+                        Remover
+                    </button>
+                </td>
             </tr>
         <?php endforeach; ?>
         </tbody>

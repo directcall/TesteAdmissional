@@ -73,6 +73,16 @@ return array(
                     ),
                 ),
             ),
+            'grupo_editar' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route'    => '/agenda/grupo/editar/[:id_grupo][/]',
+                    'defaults' => array(
+                        'controller' => 'Agenda\Controller\Grupo',
+                        'action'     => 'adicionar',
+                    ),
+                ),
+            ),
             'grupo_listar' => array(
                 'type' => 'Segment',
                 'options' => array(
@@ -80,6 +90,16 @@ return array(
                     'defaults' => array(
                         'controller' => 'Agenda\Controller\Grupo',
                         'action'     => 'listar',
+                    ),
+                ),
+            ),
+            'grupo_remover' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route'    => '/agenda/grupo/remover/[:id_grupo][/]',
+                    'defaults' => array(
+                        'controller' => 'Agenda\Controller\Grupo',
+                        'action'     => 'remover',
                     ),
                 ),
             ),

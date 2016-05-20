@@ -20,11 +20,14 @@ class GrupoTable
         $this->tableGateway = $tableGateway;
     }
 
-    public function fetchAll()
+    public function fetchById($id)
     {
-        $resultSet = $this->tableGateway->select();
+        return $this->fetchAll(array('id_grupo' => $id))->current();
+    }
 
-        return $resultSet;
+    public function fetchAll($array)
+    {
+        return $this->tableGateway->select($array);
     }
 
     public function insert($dados)
@@ -40,6 +43,6 @@ class GrupoTable
 
     public function delete($id)
     {
-        return $this->tableGateway->delete(array('id_contato' => $id));
+        return $this->tableGateway->delete(array('id_grupo' => $id));
     }
 }
