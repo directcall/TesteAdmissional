@@ -1,0 +1,30 @@
+<?php echo $this->partial('flashmessenger.phtml'); ?>
+<h1>Listagem de Grupos</h1>
+
+<?php if (count($this->grupos)): ?>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($this->grupos as $grupo) : ?>
+            <tr>
+                <td><?php echo $grupo->id_grupo; ?></td>
+                <td><?php echo $grupo->nome; ?></td>
+                <td><?php echo $grupo->descricao; ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+        </tr>
+        </tfoot>
+    </table>
+<?php else: ?>
+    <p>Nenhum grupo para listar</p>
+<?php endif; ?>

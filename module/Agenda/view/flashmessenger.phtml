@@ -1,0 +1,42 @@
+<?php if (!empty($this->messages)): ?>
+    <?php foreach ($this->messages as $message): ?>
+        <div class="row-fluid" style="margin-top: 10px;">
+            <div class="span12">
+                <div class="row-fluid">
+                    <div class="alert alert-success">
+                        <button data-dismiss="alert" class="close" type="button">×</button>
+                        <strong>Sucesso!</strong> <?php echo $message; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>
+<?php if (!empty($this->error_messages)): ?>
+    <?php foreach ($this->error_messages as $message): ?>
+        <div class="row-fluid" style="margin-top: 10px;">
+            <div class="span12">
+                <div class="row-fluid">
+                    <div class="alert alert-danger">
+                        <button data-dismiss="alert" class="close" type="button">×</button>
+                        <strong>Erro!</strong> <?php echo $message; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>
+<?php if (!empty($this->warning_messages)): ?>
+    <?php foreach ($this->warning_messages as $message): ?>
+        <div class="row-fluid" style="margin-top: 10px;">
+            <div class="span12">
+                <div class="row-fluid">
+                    <div class="alert alert-danger">
+                        <button data-dismiss="alert" class="close" type="button">×</button>
+                        <strong>Atenção!</strong> <?php echo $message; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>

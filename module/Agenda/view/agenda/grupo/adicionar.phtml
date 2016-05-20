@@ -1,0 +1,23 @@
+<?php echo $this->partial('flashmessenger.phtml'); ?>
+<h1>Adicionar novo Grupo</h1>
+
+<form class="form-horizontal" method="post">
+    <div class="control-group">
+        <label class="control-label" for="nome">Nome</label>
+        <div class="controls">
+            <input id="nome" name="nome" value="" class="input-xlarge" placeholder="Nome do Grupo"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="descricao">Descrição</label>
+        <div class="controls">
+            <input id="descricao" name="descricao" value="" class="input-xlarge" placeholder="Descrição do Grupo"/>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Gravar</button>
+        <button class="btn btn-danger" type="reset">Limpar</button>
+        <button class="btn" type="button" onclick="window.history.back();">Voltar</button>
+    </div>
+</form>
